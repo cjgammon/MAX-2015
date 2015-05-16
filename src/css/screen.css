@@ -1,0 +1,1083 @@
+/* customize ui variables */
+/* import base css */
+/* line 5, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../../../../Library/Ruby/Gems/2.0.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@-moz-keyframes rotate {
+  from {
+    -moz-transform: rotate(0deg);
+  }
+  to {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/* line 20, ../sass/pres/_pres.scss */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* line 26, ../sass/pres/_pres.scss */
+body {
+  position: relative;
+  -moz-perspective-origin: center center;
+  -webkit-perspective-origin: center center;
+  perspective-origin: center center;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/* line 32, ../sass/pres/_pres.scss */
+aside {
+  display: none;
+}
+
+/* line 36, ../sass/pres/_pres.scss */
+#bg {
+  position: fixed;
+  pointer-events: none;
+}
+
+/* line 41, ../sass/pres/_pres.scss */
+#css-renderer {
+  position: absolute;
+  z-index: 3;
+}
+
+/* line 46, ../sass/pres/_pres.scss */
+#deck {
+  position: fixed;
+  z-index: 5;
+}
+
+/* line 51, ../sass/pres/_pres.scss */
+#instructions {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  font-size: .75em;
+  padding: 1rem;
+  z-index: 100;
+  text-transform: uppercase;
+}
+
+/* line 61, ../sass/pres/_pres.scss */
+#hud {
+  display: none;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: #222;
+  z-index: 100;
+}
+
+/* line 70, ../sass/pres/_pres.scss */
+#preloader {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: -moz-flex;
+  -moz-flex-direction: column;
+  -moz-align-items: center;
+  -moz-justify-content: center;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #efefef;
+}
+
+/* line 78, ../sass/pres/_pres.scss */
+#progressHolder {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background: black;
+  z-index: 100;
+}
+
+/* line 88, ../sass/pres/_pres.scss */
+#progressBar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  background: #444;
+}
+
+/* line 96, ../sass/pres/_pres.scss */
+.spinner {
+  width: 50px;
+  height: 50px;
+  background: #00a4ae;
+  -webkit-animation: rotate 0.5s infinite linear;
+  -moz-animation: rotate 0.5s infinite linear;
+}
+
+/* line 104, ../sass/pres/_pres.scss */
+.slide {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  opacity: 0;
+}
+/* line 112, ../sass/pres/_pres.scss */
+.slide.visible {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: -moz-flex;
+  -moz-flex-direction: column;
+  -moz-align-items: center;
+  -moz-justify-content: center;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* line 119, ../sass/pres/_pres.scss */
+.hud-input {
+  position: absolute;
+  top: 0;
+  height: 5rem;
+  width: 100%;
+  padding: .5rem;
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 5rem;
+  color: #00a4ae;
+  background-color: white;
+  z-index: 20;
+}
+/* line 135, ../sass/pres/_pres.scss */
+.hud-input.in {
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+/* line 140, ../sass/pres/_pres.scss */
+.hud-list {
+  position: relative;
+  -webkit-perspective: 10000;
+  z-index: 0;
+}
+
+/* line 146, ../sass/pres/_pres.scss */
+.hud-list-item {
+  position: relative;
+  padding: 1rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 100;
+  color: white;
+  background-color: #001415;
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+  -moz-transition: -moz-transform 0.2s linear, -webkit-transform 0.2s linear, background-color 0.2s linear;
+  -o-transition: -o-transform 0.2s linear, -webkit-transform 0.2s linear, background-color 0.2s linear;
+  -webkit-transition: -webkit-transform 0.2s linear, -webkit-transform 0.2s linear, background-color 0.2s linear;
+  transition: transform 0.2s linear, -webkit-transform 0.2s linear, background-color 0.2s linear;
+  z-index: 1;
+}
+/* line 161, ../sass/pres/_pres.scss */
+.hud-list-item.prev {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+/* line 165, ../sass/pres/_pres.scss */
+.hud-list-item.next {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+/* line 169, ../sass/pres/_pres.scss */
+.hud-list-item.primed {
+  background-color: #005c62;
+  z-index: 5;
+}
+/* line 174, ../sass/pres/_pres.scss */
+.hud-list-item.selected {
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  background-color: #00a4ae;
+  z-index: 10;
+}
+
+/* line 181, ../sass/pres/_pres.scss */
+#warning {
+  display: none;
+}
+
+/* line 186, ../sass/pres/_pres.scss */
+.touch #preloader {
+  display: none;
+}
+/* line 190, ../sass/pres/_pres.scss */
+.touch #deck {
+  position: static;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+/* line 197, ../sass/pres/_pres.scss */
+.touch .slide {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: -moz-flex;
+  -moz-flex-direction: column;
+  -moz-align-items: center;
+  -moz-justify-content: center;
+  left: 0;
+  top: 0;
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* line 1, ../sass/components/_buttons.scss */
+.button-holder {
+  display: flex;
+  display: -moz-flex;
+  display: -webkit-flex;
+  width: 100vw;
+  flex-direction: row;
+  justify-content: space-around;
+  -webkit-flex-direction: row;
+  -webkit-justify-content: space-around;
+  -moz-flex-direction: row;
+  -moz-justify-content: space-around;
+}
+
+/* line 14, ../sass/components/_buttons.scss */
+#ui-button-css {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  -moz-perspective: 1000;
+  -webkit-perspective: 1000;
+  perspective: 1000;
+}
+/* line 20, ../sass/components/_buttons.scss */
+#ui-button-css .ui-button-css-side {
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  display: -moz-flex;
+  -moz-justify-content: center;
+  -moz-align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  font-size: 3rem;
+  font-weight: 600;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transition: -webkit-transform 1s;
+  -moz-tranition: -moz-transform 1s;
+  transition: transform 1s;
+}
+/* line 42, ../sass/components/_buttons.scss */
+#ui-button-css .ui-button-css-front {
+  background: white;
+  color: black;
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+/* line 48, ../sass/components/_buttons.scss */
+#ui-button-css .ui-button-css-back {
+  background: black;
+  color: white;
+  -moz-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  -webkit-transform: rotateX(-180deg);
+  transform: rotateX(-180deg);
+}
+/* line 55, ../sass/components/_buttons.scss */
+#ui-button-css:hover .ui-button-css-front {
+  -moz-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  -webkit-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+}
+/* line 59, ../sass/components/_buttons.scss */
+#ui-button-css:hover .ui-button-css-back {
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
+
+/* line 65, ../sass/components/_buttons.scss */
+#ui-button-css-mask {
+  margin-top: 10px;
+  width: 200px;
+  height: 200px;
+  background-image: url(../assets/images/buttons/yosemite_1.jpg);
+  background-size: auto 100%;
+  background-position: center center;
+  cursor: pointer;
+  outline: 0px rgba(255, 255, 255, 0.5) solid;
+  -webkit-transition: -webkit-transform .7s ease-in-out, outline .2s ease-out, background-position 1s, background-size 1s, -webkit-filter 1s;
+  -moz-transition: -moz-transform .7s ease-in-out, outline .2s ease-out, background-position 1s, background-size 1s;
+  transition: transform .7s ease-in-out, outline .2s ease-out, background-position 1s, background-size 1s, filter 1s;
+  -moz-transform: translateZ(0);
+  -ms-transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+/* line 79, ../sass/components/_buttons.scss */
+#ui-button-css-mask:hover {
+  outline: 10px rgba(225, 225, 225, 0.75) solid;
+  -webkit-filter: sepia(0.5) saturate(1) contrast(1.7);
+}
+
+/* line 85, ../sass/components/_buttons.scss */
+#ui-button-css-blend {
+  width: 200px;
+  height: 200px;
+  background-color: #ed1f24;
+  background-image: url(../assets/images/buttons/yosemite_2.jpg);
+  background-size: auto 100%;
+  background-position: 100% center;
+  background-blend-mode: hard-light;
+  border-radius: 100px;
+  cursor: pointer;
+  -moz-transition: background-color 1s, background-position 1s;
+  -o-transition: background-color 1s, background-position 1s;
+  -webkit-transition: background-color 1s, background-position 1s;
+  transition: background-color 1s, background-position 1s;
+}
+/* line 97, ../sass/components/_buttons.scss */
+#ui-button-css-blend:hover {
+  background-color: #eaeaea;
+  background-position: center center;
+}
+
+/* line 103, ../sass/components/_buttons.scss */
+#ui-button-svg {
+  display: none;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+/* line 109, ../sass/components/_buttons.scss */
+#ui-button-svg .ui-button-svg-bg {
+  -moz-transition: fill 0.6s;
+  -o-transition: fill 0.6s;
+  -webkit-transition: fill 0.6s;
+  transition: fill 0.6s;
+}
+/* line 113, ../sass/components/_buttons.scss */
+#ui-button-svg .ui-button-svg-stroke {
+  -moz-transition: stroke 0.4s, stroke-width 0.4s;
+  -o-transition: stroke 0.4s, stroke-width 0.4s;
+  -webkit-transition: stroke 0.4s, stroke-width 0.4s;
+  transition: stroke 0.4s, stroke-width 0.4s;
+}
+/* line 117, ../sass/components/_buttons.scss */
+#ui-button-svg .ui-button-svg-icon {
+  -moz-transition: fill 0.2s, -webkit-transform 0.2s ease-in;
+  -o-transition: fill 0.2s, -webkit-transform 0.2s ease-in;
+  -webkit-transition: fill 0.2s, -webkit-transform 0.2s ease-in;
+  transition: fill 0.2s, -webkit-transform 0.2s ease-in;
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+/* line 124, ../sass/components/_buttons.scss */
+#ui-button-svg:hover .ui-button-svg-bg {
+  fill: #939393;
+}
+/* line 128, ../sass/components/_buttons.scss */
+#ui-button-svg:hover .ui-button-svg-stroke {
+  stroke: #E96231;
+  stroke-width: 3;
+}
+/* line 133, ../sass/components/_buttons.scss */
+#ui-button-svg:hover .ui-button-svg-icon {
+  fill: white;
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+  transform: scale(0.5);
+}
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+  }
+}
+/* line 150, ../sass/components/_buttons.scss */
+#ui-button-svg-1 {
+  display: none;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+/* line 156, ../sass/components/_buttons.scss */
+#ui-button-svg-1 .ui-button-svg-bg {
+  -moz-transition: fill 2s;
+  -o-transition: fill 2s;
+  -webkit-transition: fill 2s;
+  transition: fill 2s;
+}
+/* line 160, ../sass/components/_buttons.scss */
+#ui-button-svg-1 .ui-button-svg-stroke {
+  -moz-transition: stroke 0.4s, stroke-width 0.4s;
+  -o-transition: stroke 0.4s, stroke-width 0.4s;
+  -webkit-transition: stroke 0.4s, stroke-width 0.4s;
+  transition: stroke 0.4s, stroke-width 0.4s;
+}
+/* line 164, ../sass/components/_buttons.scss */
+#ui-button-svg-1 .ui-button-svg-icon {
+  -moz-transition: fill 0.2s;
+  -o-transition: fill 0.2s;
+  -webkit-transition: fill 0.2s;
+  transition: fill 0.2s;
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+/* line 169, ../sass/components/_buttons.scss */
+#ui-button-svg-1 .ui-button-svg-group {
+  -moz-transform-origin: center center;
+  -ms-transform-origin: center center;
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+/* line 174, ../sass/components/_buttons.scss */
+#ui-button-svg-1:hover .ui-button-svg-bg {
+  fill: #333;
+}
+/* line 178, ../sass/components/_buttons.scss */
+#ui-button-svg-1:hover .ui-button-svg-stroke {
+  stroke: #E96231;
+  stroke-width: 3;
+}
+/* line 183, ../sass/components/_buttons.scss */
+#ui-button-svg-1:hover .ui-button-svg-icon {
+  fill: white;
+}
+
+/* line 193, ../sass/components/_buttons.scss */
+#ui-button-svg-2 {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+}
+/* line 198, ../sass/components/_buttons.scss */
+#ui-button-svg-2 svg {
+  pointer-events: none;
+}
+/* line 202, ../sass/components/_buttons.scss */
+#ui-button-svg-2 circle:nth-child(3) {
+  -moz-transition: fill 1s;
+  -o-transition: fill 1s;
+  -webkit-transition: fill 1s;
+  transition: fill 1s;
+}
+/* line 207, ../sass/components/_buttons.scss */
+#ui-button-svg-2:hover circle:nth-child(3) {
+  fill: #ccc;
+  stroke: none;
+}
+
+/* line 214, ../sass/components/_buttons.scss */
+#ui-button-canvas {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+/* line 221, ../sass/components/_buttons.scss */
+#ui-button-canvas-blend {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+/* line 228, ../sass/components/_buttons.scss */
+#ui-button-canvas-video {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+/* line 235, ../sass/components/_buttons.scss */
+#ui-button-webgl {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  background: white;
+  opacity: 0;
+}
+
+/* line 243, ../sass/components/_buttons.scss */
+#ui-button-webgl-light {
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  background: white;
+  opacity: 0;
+}
+
+/* line 251, ../sass/components/_buttons.scss */
+#ui-button-webgl-shader {
+  background: white;
+  width: 200px;
+  height: 200px;
+  cursor: pointer;
+  opacity: 0;
+}
+
+/* line 259, ../sass/components/_buttons.scss */
+#ui-button-vert-shader, #ui-button-frag-shader {
+  display: block;
+  margin: auto;
+}
+
+/* line 264, ../sass/components/_buttons.scss */
+.button_base {
+  margin: 0;
+  border: 0;
+  font-size: 18px;
+  position: relative;
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-user-select: none;
+  cursor: default;
+}
+
+/* line 279, ../sass/components/_buttons.scss */
+.button_base:hover {
+  cursor: pointer;
+}
+
+/* line 1, ../sass/components/_iframe.scss */
+iframe {
+  width: 90vw;
+  height: 90vh;
+  z-index: 0;
+  background: white;
+  outline: 0em solid transparent;
+  background-color: transparent;
+}
+/* line 9, ../sass/components/_iframe.scss */
+iframe.focus {
+  outline: 100px solid rgba(0, 0, 0, 0.75);
+}
+
+/* line 14, ../sass/components/_iframe.scss */
+.iframe-clickarea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+/* line 22, ../sass/components/_iframe.scss */
+.iframe-clickarea.focus {
+  pointer-events: none;
+  cursor: auto;
+}
+
+/*
+* long-shadow
+* $rgba - colors 0-255
+* $n    - length of shadow
+*/
+/* custom styles */
+/* line 43, ../sass/screen.scss */
+body {
+  font-family: "Futura PT", "futura-pt", "Futura Std", impact, sans-serif;
+  font-size: 2rem;
+  color: white;
+  background: black;
+}
+
+/* line 50, ../sass/screen.scss */
+b, h2, h3, h4 {
+  position: relative;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: .1em;
+  margin-bottom: 1rem;
+}
+
+/* line 59, ../sass/screen.scss */
+em {
+  font-weight: 800;
+}
+
+/* line 63, ../sass/screen.scss */
+h2 {
+  font-size: 6rem;
+}
+
+/* line 67, ../sass/screen.scss */
+h3 {
+  font-size: 4rem;
+}
+
+/* line 71, ../sass/screen.scss */
+h4 {
+  font-size: 2rem;
+}
+
+/* line 75, ../sass/screen.scss */
+a {
+  color: #efefef;
+  text-decoration: none;
+}
+/* line 79, ../sass/screen.scss */
+a:hover {
+  color: white;
+}
+
+/* line 84, ../sass/screen.scss */
+ol {
+  font-size: 3rem;
+  text-transform: uppercase;
+  list-style-type: decimal;
+}
+
+/* line 90, ../sass/screen.scss */
+li {
+  line-height: 1.5;
+}
+
+/* line 94, ../sass/screen.scss */
+header {
+  position: absolute;
+  margin-top: 2rem;
+  top: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.5;
+  z-index: 2;
+}
+/* line 107, ../sass/screen.scss */
+header small {
+  font-size: .8rem;
+}
+
+/* line 112, ../sass/screen.scss */
+footer {
+  position: absolute;
+  margin-bottom: 1rem;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* line 124, ../sass/screen.scss */
+blockquote {
+  padding: 100px;
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+  font-style: italic;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* line 134, ../sass/screen.scss */
+em {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 0.5em;
+  letter-spacing: 0.1em;
+}
+
+/* line 141, ../sass/screen.scss */
+code {
+  display: block;
+  max-width: 100%;
+  max-height: 75vh;
+  color: white;
+  line-height: 1.3em;
+  font-family: 'source code pro', courier, monospace;
+  font-weight: bold;
+  font-size: 3rem;
+  white-space: pre;
+}
+/* line 152, ../sass/screen.scss */
+code span {
+  color: #EDDE3E;
+}
+
+/* line 157, ../sass/screen.scss */
+.slide {
+  -webkit-box-sizing: border-box;
+  padding: 1rem;
+}
+
+/* line 162, ../sass/screen.scss */
+.slide--black {
+  color: white;
+  background: #333;
+}
+
+/* line 168, ../sass/screen.scss */
+.slide--video video {
+  position: absolute;
+}
+
+/* line 174, ../sass/screen.scss */
+.slide--iframe {
+  background: transparent;
+}
+/* line 177, ../sass/screen.scss */
+.slide--iframe h2, .slide--iframe h4 {
+  z-index: 2;
+}
+
+/* line 182, ../sass/screen.scss */
+.slide--full {
+  padding: 0;
+}
+/* line 185, ../sass/screen.scss */
+.slide--full iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+/* line 195, ../sass/screen.scss */
+.slide--namecard.visible {
+  justify-content: flex-end;
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  padding: 3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+/* line 203, ../sass/screen.scss */
+.slide--namecard.visible .name, .slide--namecard.visible .handle {
+  text-transform: none;
+}
+
+/* line 208, ../sass/screen.scss */
+.fixed {
+  position: fixed;
+  bottom: 0;
+  padding: .5em;
+  z-index: 100;
+}
+/* line 214, ../sass/screen.scss */
+.fixed a {
+  color: white;
+}
+/* line 218, ../sass/screen.scss */
+.fixed.right {
+  right: 0;
+}
+/* line 222, ../sass/screen.scss */
+.fixed.left {
+  left: 0;
+}
+
+/* line 227, ../sass/screen.scss */
+.fixed, .fixed a {
+  font-family: 'avenir', serif;
+  font-weight: 100;
+  font-size: 1.5rem;
+  text-transform: lowercase;
+}
+
+/* line 234, ../sass/screen.scss */
+#cover {
+  flex-direction: row;
+  justify-content: flex-start;
+}
+/* line 238, ../sass/screen.scss */
+#cover h2 {
+  box-sizing: border-box;
+  padding: 0.5em;
+  font-size: 4rem;
+  font-weight: 100;
+  width: 50%;
+}
+
+/* line 247, ../sass/screen.scss */
+#gsap-code code {
+  position: relative;
+}
+
+/* line 251, ../sass/screen.scss */
+#webgl-code code {
+  font-size: 12px;
+  font-weight: bold;
+  overflow-y: scroll;
+}
+
+/* line 257, ../sass/screen.scss */
+.threejs-code code {
+  font-size: 2rem;
+}
+
+/* line 261, ../sass/screen.scss */
+code.highlight {
+  color: rgba(255, 255, 255, 0.25);
+}
+/* line 264, ../sass/screen.scss */
+code.highlight em {
+  color: white;
+  font-size: inherit;
+  font-style: inherit;
+  letter-spacing: inherit;
+}
+
+/* line 272, ../sass/screen.scss */
+#surrogates {
+  background-image: url(../assets/images/surrogates.jpg);
+  background-size: cover;
+}
+
+/* line 278, ../sass/screen.scss */
+#tools h2 {
+  z-index: -1;
+}
+
+/* line 283, ../sass/screen.scss */
+#pixar {
+  background-image: url(../assets/images/sully.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+/* line 290, ../sass/screen.scss */
+#word-girl-psd {
+  background-image: url(../assets/images/wordgirl-psd.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 297, ../sass/screen.scss */
+#resources {
+  font-size: 1rem;
+}
+/* line 300, ../sass/screen.scss */
+#resources h2 {
+  font-size: 3rem;
+}
+/* line 304, ../sass/screen.scss */
+#resources h3 {
+  font-size: 2rem;
+}
+/* line 308, ../sass/screen.scss */
+#resources a {
+  margin: 0.5em;
+}
+
+/* line 313, ../sass/screen.scss */
+#warning {
+  display: none;
+}
+
+/* line 318, ../sass/screen.scss */
+.no-flexbox #warning {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  color: white;
+  text-align: center;
+  z-index: 10000;
+}
+/* line 330, ../sass/screen.scss */
+.no-flexbox #warning p {
+  display: block;
+  margin: 100px auto;
+  width: 70%;
+  line-height: 1.5;
+}
+
+/* line 341, ../sass/screen.scss */
+.touch body {
+  overflow: auto;
+}
+/* line 345, ../sass/screen.scss */
+.touch #preloader {
+  display: none;
+}
+/* line 349, ../sass/screen.scss */
+.touch #deck {
+  position: static;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+/* line 355, ../sass/screen.scss */
+.touch .slide {
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: -moz-flex;
+  -moz-flex-direction: column;
+  -moz-align-items: center;
+  -moz-justify-content: center;
+  left: 0;
+  top: 0;
+  position: relative;
+  opacity: 1;
+  pointer-events: auto;
+}
+/* line 364, ../sass/screen.scss */
+.touch .slide--iframe {
+  display: none;
+}
+/* line 368, ../sass/screen.scss */
+.touch #webgl-code code {
+  width: 70vw;
+  height: 50vh;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 376, ../sass/screen.scss */
+  html {
+    font-size: .3em;
+  }
+}

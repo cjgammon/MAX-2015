@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>no styling</title>
+		<style>
+			body{
+				margin: 0;
+				overflow: hidden;
+				text-align: center;
+			}
+			
+			canvas{
+				margin: auto;
+				width: 100vw;
+				height: 100vh;
+			}
+		</style>
+	</head>
+	<body>
+		<script src="pixi.js"></script>
+		<script src="gsap/TweenMax.js"></script>
+		<script>
+			var stage,
+				renderer,
+				graphics,
+				bg = 0xD62B58,
+				color = 0xffffff,
+				_w = 1024 * 2,
+				_h = 768 * 2,
+				_tl,
+				circles = [],
+				lines = [],
+				rect,
+				rectPoints = [
+					{x: -50, y: -50},
+					{x: 50, y: -50},
+					{x: 50, y: 50},
+					{x: -50, y: 50}
+				],
+				rectPoints2 = [
+					{x: -50, y: -50},
+					{x: 50, y: -50},
+					{x: 50, y: 50},
+					{x: -50, y: 50}
+				],
+				linecount = 10,
+				count = 19,
+				i;
+			
+			function init() {
+				_tl = new TimelineMax({yoyo: true, repeat: -1});
+				_tl.timeScale(2);
+
+				stage = new PIXI.Stage(bg);
+			    renderer = PIXI.autoDetectRenderer(_w, _h, {transparent:true});
+
+			    document.body.appendChild(renderer.view);
+
+				//lines
+				linecontainer = new PIXI.DisplayObjectContainer();
+				linecontainer.x = _w / 2;
+				linecontainer.y = _h / 2;
+				linecontainer.alpha = 0;
+				stage.addChild(linecontainer);
+
+				for (i = 0; i < linecount; i += 1) {
+					a = 2 * Math.PI * i / linecount;
+					line = new PIXI.Graphics();
+					line.lineStyle(5, color, 1);
+				    line.moveTo(0, 0);
+					line.lineTo(10, 0);
+					line.rotation = a;
+					linecontainer.addChild(line);
+					lines.push(line);
+				}
+
+				//circles
+				container = new PIXI.DisplayObjectContainer();
+				container.x = _w / 2;
+				container.y = _h / 2;
+				stage.addChild(container);
+
+				bigcircle = new PIXI.Graphics();
+			    bigcircle.beginFill(color);
+			    bigcircle.arc(0, 0, 225, 0, 2 * Math.PI, false);
+				bigcircle.alpha = 0;
+				container.addChild(bigcircle);
+
+				bigcirclestroke = new PIXI.Graphics();
+			    bigcirclestroke.lineStyle(10, color, 1);
+			    bigcirclestroke.arc(0, 0, 250, 0, 2 * Math.PI, false);
+				bigcirclestroke.scale = new PIXI.Point(0, 0);
+				container.addChild(bigcirclestroke);
+
+				for (i = 0; i < count; i += 1) {
+					circle = new PIXI.Graphics();
+				    circle.beginFill(color);
+				    circle.arc(0, 0, 10, 0, 2 * Math.PI, false);
+					circles.push(circle);
+				    container.addChild(circle);
+				}
+				
+				//rect
+				rect = new PIXI.Graphics();
+				drawRect(0xFF2492, 20, rectPoints, rect);
+				rect.x = _w / 2;
+				rect.y = _h / 2;
+				rect.alpha = 0;
+			    stage.addChild(rect);
+			
+				rect2 = new PIXI.Graphics();
+				drawRect(0xffffff, 10, rectPoints2, rect2);
+				rect2.x = _w / 2;
+				rect2.y = _h / 2;
+				rect2.scale = new PIXI.Point(0, 0);
+				rect2.alpha = 0;
+			    stage.addChild(rect2);
+				
+				//begin animating tl
+				for (i = 0; i < count; i += 1) {
+					a = 4 * Math.PI * i / count;
+					
+					_tl.to(circles[i], 1, {x: Math.cos(a) * 100, y: Math.sin(a) * 100}, i / 10);
+					_tl.to(circles[i].scale, 0.4, {x: 0.5, y: 0.5, yoyo: true, repeat: 1}, 1 + (i / 10));
+					_tl.to(circles[i].scale, 0.4, {x: 2, y: 2}, 2 + (i / 10));
+					_tl.to(circles[i], 1, {x: Math.cos(a) * 200, y: Math.sin(a) * 200}, '-=1');
+				}
+				
+				_tl.to(container, 2.5, {rotation: Math.PI * 2, ease: Back.easeInOut}, '-=1');
+				_tl.to(bigcircle, 0.4, {alpha: 1, ease: Quad.easeOut}, '-=1');
+				
+				for (i = 0; i < count; i += 1) {
+					_tl.set(circles[i], {x: 0, y: 0});
+					_tl.set(circles[i].scale, {x: 0, y: 0});
+				}
+				
+				_tl.to(container.scale, 2, {x: 1.5, y: 1.5, ease: Back.easeOut}, '-=1');
+				_tl.to(bigcirclestroke.scale, 1, {x: 1, y: 1, ease: Quad.easeInOut}, '-=2');    
+				_tl.to(bigcircle.scale, 1, {x: 0.15, y: 0.15, ease: Back.easeInOut}, '-=0.5');
+				_tl.to(bigcirclestroke.scale, 1, {x: 0.5, y: 0.5, ease: Quad.easeInOut}, '-=1');    
+				_tl.to(bigcircle.scale, 1, {x: 0, y: 0, ease: Back.easeIn});
+				
+				_tl.to(bigcirclestroke.scale, 0.5, {x: 0.1, y: 0.1, ease: Back.easeIn}, '-=1');
+				_tl.to(bigcirclestroke, 0.5, {alpha: 0, ease: Back.easeIn}, '-=1');
+				
+				_tl.to(linecontainer, 0.2, {alpha: 1}, '-=1');
+				
+				for (i = 0; i < linecount; i += 1) {
+					scale = i % 2 == 0 ? 60 : 20;
+					_tl.to(lines[i].scale, 1, {x: scale, ease: Quad.easeInOut}, '-=1');
+				}
+
+				time = _tl.duration();
+				for (i = 0; i < linecount; i += 1) {
+					a = 2 * Math.PI * i / linecount;
+					_tl.to(lines[i], 2, {x: Math.cos(a) * 2000, y: Math.sin(a) * 2000, rotation: a, ease: Quint.easeInOut}, time - 1);
+				}
+				
+				_tl.to(bigcirclestroke, 0.2, {alpha: 1, ease: Quad.easeOut}, time - 1);
+				_tl.to(bigcirclestroke.scale, 2, {x: 4, y: 4, ease: Quint.easeInOut}, time - 1);
+				
+				/*
+				_tl.to(rect, 0.2, {alpha: 1}, '-=1.5');
+				_tl.to(rect2, 0.2, {alpha: 1}, '-=1');
+				_tl.to(rect2.scale, 0.2, {x: 1, y: 1}, '-=1');
+			
+				_tl2 = new TimelineMax({onUpdate: drawRect, onUpdateParams: [0xFF2492, 20, rectPoints, rect]});
+				_tl2.to(rectPoints[0], 0.2, {x: -100, y: -400, ease: Quad.easeOut});
+				_tl2.to(rectPoints[1], 0.2, {x: 400, y: -200, ease: Quad.easeOut});
+				_tl2.to(rectPoints[2], 0.2, {x: 200, y: 100, ease: Quad.easeOut});
+				_tl2.to(rectPoints[3], 0.2, {x: -500, y: 300, ease: Quad.easeOut});
+				_tl.add(_tl2);
+				
+				_tl.to(rect, 1, {rotation: 180 * Math.PI / 180});
+				
+				_tl3 = new TimelineMax({onUpdate: drawRect, onUpdateParams: [0xFF2492, 20, rectPoints, rect]});
+				_tl3.to(rectPoints[0], 0.5, {x: -400, y: -600, ease: Quint.easeInOut}, 0);
+				_tl3.to(rectPoints[1], 0.5, {x: 500, y: -300, ease: Quint.easeInOut}, 0);
+				_tl3.to(rectPoints[2], 0.5, {x: 600, y: 400, ease: Quint.easeInOut}, 0);
+				_tl3.to(rectPoints[3], 0.5, {x: -400, y: 700, ease: Quint.easeInOut}, 0);
+				_tl.add(_tl3, '-=1');
+				
+				_tl4 = new TimelineMax({onUpdate: drawRect, onUpdateParams: [0xffffff, 10, rectPoints2, rect2]});
+				_tl4.to(rectPoints2[0], 1, {x: -200, y: -300, ease: Elastic.easeOut}, 0);
+				_tl4.to(rectPoints2[1], 1, {x: 150, y: -400, ease: Elastic.easeOut}, 0);
+				_tl4.to(rectPoints2[2], 1, {x: 300, y: 100, ease: Elastic.easeOut}, 0);
+				_tl4.to(rectPoints2[3], 1, {x: -250, y: 200, ease: Elastic.easeOut}, 0);
+				_tl.add(_tl4, '-=1');
+				
+				_tl5 = new TimelineMax({onUpdate: drawRect, onUpdateParams: [0xFF2492, 20, rectPoints, rect]});
+				_tl5.to(rectPoints[0], 1, {x: 200, y: 300, ease: Quint.easeInOut}, 0);
+				_tl5.to(rectPoints[1], 1, {x: -300, y: 100, ease: Quint.easeInOut}, 0);
+				_tl5.to(rectPoints[2], 1, {x: -400, y: -200, ease: Quint.easeInOut}, 0);
+				_tl5.to(rectPoints[3], 1, {x: 200, y: -400, ease: Quint.easeInOut}, 0);
+				_tl.add(_tl5, '-=1');
+				
+				_tl6 = new TimelineMax({onUpdate: drawRect, onUpdateParams: [0xffffff, 10, rectPoints2, rect2]});
+				_tl6.to(rectPoints2[0], 0.1, {x: -300, y: -100, ease: Quad.easeOut});
+				_tl6.to(rectPoints2[1], 0.1, {x: 250, y: -200, ease: Quad.easeOut});
+				_tl6.to(rectPoints2[2], 0.1, {x: 100, y: 300, ease: Quad.easeOut});
+				_tl6.to(rectPoints2[3], 0.1, {x: -150, y: 300, ease: Quad.easeOut});
+				_tl.add(_tl6);
+				*/
+				
+				//requestAnimationFrame(animate);
+				TweenMax.ticker.addEventListener("tick", animate);
+			}
+			
+			function drawRect(color, stroke, points, r) {
+				r.clear();
+				r.lineStyle(stroke, color, 1);
+				r.moveTo(points[0].x, points[0].y);
+				for (i = 1; i < points.length; i += 1) {
+					r.lineTo(points[i].x, points[i].y);
+				}
+				r.lineTo(points[0].x, points[0].y);
+				r.updateCache();
+			}
+			
+			window.animIn = function () {
+				setTimeout(init, 300);
+			}
+			
+			window.animOut = function (cb) {
+				cb();
+			}
+			
+			function animate() {
+		        renderer.render(stage);
+			//	requestAnimationFrame(animate);
+			}
+		</script>
+	</body>
+</html>

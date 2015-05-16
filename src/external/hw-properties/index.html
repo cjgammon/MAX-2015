@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>no styling</title>
+		
+		<style>
+			body{
+				width: 100vw;
+				height: 100vh;
+				margin: 0;
+				overflow: hidden;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				color: white;
+				font-family: "Futura PT", "futura-pt", "Futura Std", impact, sans-serif;
+				text-align: center;
+			}
+			
+			.el{
+				margin: 3em;
+				opacity: 0;
+				-webkit-transform: scale(0);
+				-webkit-transition: opacity 1s, -webkit-transform 1s, transform 1s, -webkit-filter 1s;
+				will-change: opacity, -webkit-transform, -webkit-filter;
+			}
+			
+			.el.in{
+				opacity: 1;
+				-webkit-transform: scale(1);
+			}
+			
+			h2{
+				font-size: 2rem;
+				-webkit-transform: translate(0, -20px);
+				opacity: 0;
+				-webkit-transition: opacity 1s, -webkit-transform 1s, transform 1s;
+			}
+			
+			h2.in{
+				-webkit-transform: translate(0, 0);
+				opacity: 1;
+			}
+			
+			@-webkit-keyframes transform{
+				0%{
+					-webkit-transform: scale(1);
+				}
+				
+				50%{
+					-webkit-transform: scale(0.5) rotate(180deg);
+				}
+				
+				100%{
+					-webkit-transform: scale(1);
+				}
+			}
+			
+			#prop-trans.animate{
+				-webkit-animation: transform 2s infinite;
+			}
+			
+			@-webkit-keyframes opacity{
+				0%{
+					opacity: 1;
+				}
+				
+				50%{
+					opacity: 0.1;
+				}
+				
+				100%{
+					opacity: 1;
+				}
+			}
+			
+			#prop-opacity.animate{
+				-webkit-animation: opacity 2s infinite;
+			}
+			
+			@-webkit-keyframes blur{
+				0%{
+					-webkit-filter: invert(0%);
+				}
+				
+				50%{
+					-webkit-filter: invert(100%);
+				}
+				
+				100%{
+					-webkit-filter: invert(0%);
+				}
+			}
+			
+			#prop-filter.animate{
+				-webkit-animation: blur 2s infinite;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div id="prop-trans" class="el">
+			<svg width="150" height="150" viewBox="0 0 150 150">
+				<g transform="translate(75, 75)">
+					<line fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" x1="-45" y1="-0.5" x2="46" y2="-0.5"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" x1="-0.5" y1="-46" x2="-0.5" y2="45"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="-46.1" x2="14.2" y2="-31.9"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" x1="-0.2" y1="-46.1" x2="-14.4" y2="-31.9"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" x1="-0.2" y1="45.7" x2="-14.4" y2="31.5"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="45.7" x2="14.2" y2="31.5"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" x1="-46" y1="-0.3" x2="-31.8" y2="-14.5"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" x1="-46" y1="-0.1" x2="-31.8" y2="14.1"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" x1="45.7" y1="-0.1" x2="31.6" y2="14.1"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" x1="45.7" y1="-0.3" x2="31.6" y2="-14.5"/>
+				</g>
+			</svg>
+			</div>
+			<h2>TRANSFORM</h2>
+		</div>
+		<div>
+			<div id="prop-opacity" class="el">
+			<svg width="150" height="150" viewBox="0 0 150 150">
+				<g transform="translate(75, 75)">
+					<path id="opac-lid" fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" d="M62.3,1c0,0-25.4,28-62.3,28S-62.3,1-62.3,1S-42.6-27,0-27S62.3,1,62.3,1z"/>
+					<circle fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" cx="0" cy="1" r="28"/>
+					<circle fill="#FFFFFF" cx="0" cy="1" r="9.2"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" x1="-38.6" y1="-22" x2="-50.8" y2="-49"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" x1="-19.3" y1="-26.5" x2="-25.4" y2="-54"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" x1="0" y1="-31" x2="0" y2="-59"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" x1="20.5" y1="-26" x2="29" y2="-53.5"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="10" stroke-linecap="round" stroke-miterlimit="10" x1="41" y1="-21" x2="58" y2="-48"/>
+				</g>
+			</svg>
+			</div>
+			<h2>OPACITY</h2>
+		</div>
+		<div>
+			<div id="prop-filter" class="el">
+			<svg width="150" height="150" viewBox="0 0 150 150">
+				<g transform="translate(75, 75)">
+					<line fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" x1="-45.5" y1="-54" x2="-45.5" y2="53"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" x1="-0.5" y1="-54" x2="-0.5" y2="53"/>
+					<line fill="none" stroke="#FFFFFF" stroke-width="7" stroke-linecap="round" stroke-miterlimit="10" x1="50.5" y1="-54" x2="50.5" y2="53"/>
+					<circle fill="#D62B58" stroke="#FFFFFF" stroke-width="7" stroke-miterlimit="10" cx="0.5" cy="-14.7" r="10.9"/>
+					<circle fill="#D62B58" stroke="#FFFFFF" stroke-width="7" stroke-miterlimit="10" cx="51.4" cy="19.3" r="10.9"/>
+					<circle fill="#D62B58" stroke="#FFFFFF" stroke-width="7" stroke-miterlimit="10" cx="-45.4" cy="2.3" r="10.9"/>
+				</g>
+			</svg>
+			</div>
+			<h2>FILTERS</h2>
+		</div>
+		<script>
+			var transEl = document.getElementById('prop-trans'),
+				opacEl = document.getElementById('prop-opacity'),
+				filtEl = document.getElementById('prop-filter'),
+				h2 = document.getElementsByTagName('h2');
+						
+			window.animIn = function () {
+				setTimeout(function () {
+					filtEl.className = opacEl.className = transEl.className += " in";
+					setTimeout(function () {
+						filtEl.className = opacEl.className = transEl.className += " animate";
+					}, 1000);
+
+					for (i = 0; i < h2.length; i += 1) {
+						h2[i].className = "in";
+					}
+				}, 100)
+
+			}
+			
+			window.animOut = function (cb) {
+				filtEl.className = opacEl.className = transEl.className = "el in";
+				setTimeout(function () {
+					filtEl.className = opacEl.className = transEl.className = "el";
+					setTimeout(cb, 1000);
+				}, 200);
+				
+				for (i = 0; i < h2.length; i += 1) {
+					h2[i].className = "";
+				}
+			}
+			
+		</script>
+	</body>
+</html>
