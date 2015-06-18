@@ -6,20 +6,24 @@ define(function (require) {
 		UserEvent = require('pres/events/user-event'),
 		AppEvent = require('pres/events/app-event'),
 		currentSlide,
-		currentBg,
-		BgView;
+		MaskView;
 	
-	BgView = Backbone.View.extend({
+    require('snap');
+
+	MaskView = Backbone.View.extend({
 
 		initialize: function () {
 				
-			this.$el = $('#bg');
-			this.canvas = this.$el[0];
-			this.ctx = this.canvas.getContext('2d');
-			this.resize();
-			UserEvent.on('resize', this.resize, this);
+			this.maskSVG = Snap('#mask');
+			this.bgSVG = Snap('#bg');
+
+			//this.canvas = this.$el[0];
+			//this.ctx = this.canvas.getContext('2d');
+			//this.resize();
+			//UserEvent.on('resize', this.resize, this);
 		},
 		
+        /*
 		render: function () {
 			var currentView,
 				slide;
@@ -71,7 +75,8 @@ define(function (require) {
 			this.canvas.height = window.innerHeight;
 			this.render();
 		}
+        */
 	});
 		
-	return BgView;
+	return MaskView;
 });
