@@ -30,9 +30,11 @@
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
+        
+        <canvas id="bg"></canvas>
 
 		<div id="deck">
-			<section id="cover" class="slide slide--iframe slide--full" data-class="sequence" data-src="external/cover/index.html">
+			<section id="cover" class="slide" data-class="basic" data-color="#333333">
 				<h4>THE TRAGEDY OF</h4>
 				<h2>MAKING RICH EXPERIENCES</h2>
 				<h4>FOR THE WEB</h4>
@@ -50,15 +52,17 @@
 				<h2>RICH WEB EXPERIENCES</h2>
             </section>
 
+            <section id="red-universe" class="slide slide--iframe" data-class="iframe" data-color="#ffffff" data-src="http://reduniverse.com/">
+			</section>
+
         	<section id="tragedy" class="slide" data-class="basic" data-color="#55acee">
 				<h2>TRAGEDY</h2>
 			</section>
 
-			<section id="everyone" class="slide" data-class="basic" data-color="#55acee">
-				<h2>THIS IS FOR EVERYONE</h2>
+            <section id="everyone" class="slide slide--iframe slide--full" data-class="in-out" data-src="external/everyone_dots/index.html" data-trans="2" data-color="#ffc571">
 			</section>
 
-			<section id="markup" class="slide" data-class="basic" data-color="#55acee">
+			<section id="markup" class="slide" data-class="basic" data-color="#333333" data-trans="1">
 				<code><pre>&lt;h1&gt;Header&lt;/h1&gt;
 &lt;p&gt;This is a paragraph.&lt;/p&gt;</pre></code>
 			</section>
@@ -67,70 +71,388 @@
 				<blockquote>how will we create for the web of the future?</blockquote>
 			</section>
 
-			<section id="simplify" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
+			<section id="simplify" class="slide" data-class="basic" data-color="#55acee" data-trans="4">
 				<blockquote>SIMPLIFY THE CREATION OF MORE COMPLEX CONTENT</blockquote>
 			</section>
 
             <section id="graphics" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
 				<h2>GRAPHICS</h2>
+				<h3>SVG &amp; CANVAS</h3>
 			</section>
             
-            <section id="svg-canvas" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
-				<h2>SVG &amp; CANVAS</h2>
+            <section id="caniuse" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
+				<h2>caniuse.com</h2>
 			</section>
 
             <section id="svg" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
 				<h2>SVG</h2>
 			</section>
-
-            <section id="canvas" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
-				<h2>CANVAS</h2>
-			</section>
             
-            <section id="canvas2d" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
-				<h2>2D Canvas</h2>
+            <section id="svg-demo" class="slide slide--iframe" data-class="iframe" data-color="#55acee" data-src="">
+				<h2>svg demo basic illutrator animation</h2>
             </section>
 
-            <section id="canvas3d" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
-				<h2>webgl</h2>
+            <section id="svg-code" class="slide" data-class="basic" data-color="#333333">
+                <code><pre>&lt;svg width="50" height="50"&gt;
+    &lt;circle cx="50" cy="50" r="100"/&gt;
+&lt;/svg&gt;</pre></code>
 			</section>
 
-			<section id="tools" class="slide" data-class="basic" data-trans="3" data-color="#55acee">
-				<blockquote>tools make it easier</blockquote>
+			<section id="snap" class="slide" data-class="basic" data-color="#5e7f70">
+				<h3>Raphaël.js</h3>
+				<h3>d3.js</h3>
+				<h3>Snap.svg</h3>
 			</section>
-           
-            <section id="canvas-tool" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
-				<h2>canvas tooling</h2>
+
+            <section id="snap-code" class="slide" data-class="basic" data-color="#333333">
+                <code><pre>var s = new Snap(50, 50);
+var circ = s.circle(50, 50, 100);</pre></code>
+			</section>
+            
+            <section id="svg-demo-2" class="slide slide--iframe" data-class="iframe" data-color="#ffffff" data-src="http://snapsvg.io/assets/demos/animated-game/">
+			</section>
+
+            <section id="svg-demo-3" class="slide slide--iframe" data-class="iframe" data-color="#ffffff" data-src="http://snapsvg.io/assets/demos/snap-ad/">
+			</section>
+
+            <section id="svg-demo-4" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
+                <a href="http://cjgammon.github.io/svg-art-generator/" target="blank"><h2>svg generative application</h2></a>
+			</section>
+
+	        <section id="canvas-2d" class="slide slide--iframe slide--full" data-class="iframe" data-src="external/canvas/index.html" data-color="#36AD8E">
+				<h4>Core Graphics</h4>
+				<h2>2d Canvas</h2>
+			</section>
+            
+            <section id="canvas-demo" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
+				<h2>canvas demo</h2>
+			</section>
+            
+            <section id="canvas-code" class="slide" data-class="basic" data-color="#333333" data-trans="3">
+                <code><pre>var canvas = document.createElement("canvas");
+
+var ctx = canvas.getContext("2d");
+ctx.fillStyle = "red";
+ctx.fillRect(0, 0, 50, 50);
+
+ctx.clearRect(0, 0, 50, 50);
+</pre></code>
+			</section>
+
+            <section id="canvas-libs" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
+				<h3>easel.js</h3>
+				<h3>pixi.js</h3>
+			</section>
+            
+            <section id="canvas-code-2" class="slide" data-class="basic" data-color="#333333" data-trans="3">
+                <code><pre>var stage = new createjs.Stage("canvas");
+
+var rect = new createjs.Shape();
+rect.graphics.beginFill("red");
+rect.graphics.drawRect(0, 0, 50, 50);
+stage.addChild(rect);
+
+stage.update();
+</pre></code>
+            </section>
+         
+            <section id="canvas-code-3" class="slide" data-class="basic" data-color="#333333" data-trans="3">
+                <code><pre>var renderer = new PIXI.CanvasRenderer(100, 100);
+var stage = new PIXI.Container();
+
+var rect = new PIXI.Graphics();
+rect.beginFill(0xff0000);
+rect.drawRect(0, 0, 50, 50);
+rect.endFill();
+
+renderer.render(stage);
+                </pre></code>
+            </section>
+
+            
+            <section id="canvas-demo-2" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
+				<h2>canvas demo 2</h2>
+			</section>
+            
+            <section id="canvas-demo-3" class="slide slide--iframe" data-class="iframe" data-color="#ffffff" data-src="external/wtf2/index.html">
+			</section>
+
+            <section id="graphics-opengl" class="slide slide--iframe slide--full" data-class="in-out" data-src="external/webgl/index.html" data-color="#36AD8E">
+				<h4>OpenGL</h4>
+				<h2>WebGL</h2>
+			</section>
+
+            <section id="complexity" class="slide" data-class="basic" data-trans="4" data-color="#55acee">
+				<blockquote>with great power comes great complexity</blockquote>
+			</section>
+
+            <section id="webgl-code" class="slide" data-class="basic" data-color="#333333">
+				<header>webgl</header>
+				<code><pre>var gl;
+
+function initGL(canvas) {
+	try {
+		gl = canvas.getContext("experimental-webgl");
+		gl.viewportWidth = canvas.width;
+		gl.viewportHeight = canvas.height;
+	} catch (e) {}
+}
+
+function getShader(gl, id) {
+	var shaderScript = document.getElementById(id);
+	if (!shaderScript) {
+		return null;
+	}
+
+	var str = "";
+	var k = shaderScript.firstChild;
+	while (k) {
+		if (k.nodeType == 3) {
+			str += k.textContent;
+		}
+		k = k.nextSibling;
+	}
+
+	var shader;
+	if (shaderScript.type == "x-shader/x-fragment") {
+		shader = gl.createShader(gl.FRAGMENT_SHADER);
+	} else if (shaderScript.type == "x-shader/x-vertex") {
+		shader = gl.createShader(gl.VERTEX_SHADER);
+	} else {
+		return null;
+	}
+
+	gl.shaderSource(shader, str);
+	gl.compileShader(shader);
+
+	if (!gl.getShaderParameter(shader, gl.COMPILE_STATUS)) {
+		alert(gl.getShaderInfoLog(shader));
+		return null;
+	}
+
+	return shader;
+}
+
+var shaderProgram;
+
+function initShaders() {
+	var fragmentShader = getShader(gl, "shader-fs");
+	var vertexShader = getShader(gl, "shader-vs");
+
+	shaderProgram = gl.createProgram();
+	gl.attachShader(shaderProgram, vertexShader);
+	gl.attachShader(shaderProgram, fragmentShader);
+	gl.linkProgram(shaderProgram);
+
+	if (!gl.getProgramParameter(shaderProgram, gl.LINK_STATUS)) {
+		alert("Could not initialise shaders");
+	}
+
+	gl.useProgram(shaderProgram);
+
+	shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram, 
+		"aVertexPosition");
+	gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
+
+	shaderProgram.pMatrixUniform = gl.getUniformLocation(shaderProgram, "uPMatrix");
+	shaderProgram.mvMatrixUniform = gl.getUniformLocation(shaderProgram, "uMVMatrix");
+}
+
+var mvMatrix = mat4.create();
+var pMatrix = mat4.create();
+
+function setMatrixUniforms() {
+	gl.uniformMatrix4fv(shaderProgram.pMatrixUniform, false, pMatrix);
+	gl.uniformMatrix4fv(shaderProgram.mvMatrixUniform, false, mvMatrix);
+}
+
+var squareVertexPositionBuffer;
+
+function initBuffers() {
+
+	squareVertexPositionBuffer = gl.createBuffer();
+	gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
+	vertices = [
+		1.0,  1.0,  0.0,
+		-1.0,  1.0,  0.0,
+		1.0, -1.0,  0.0,
+		-1.0, -1.0,  0.0
+		];
+	gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(vertices), gl.STATIC_DRAW);
+ 	squareVertexPositionBuffer.itemSize = 3;
+	squareVertexPositionBuffer.numItems = 4;
+}
+
+function drawScene() {
+	gl.viewport(0, 0, gl.viewportWidth, gl.viewportHeight);
+	gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+	mat4.perspective(45, gl.viewportWidth / gl.viewportHeight, 0.1, 100.0, pMatrix);
+	mat4.identity(mvMatrix);
+
+	mat4.translate(mvMatrix, [0.0, 0.0, -7.0]);
+	gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
+	gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, 
+		squareVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
+	setMatrixUniforms();
+	gl.drawArrays(gl.TRIANGLE_STRIP, 0, squareVertexPositionBuffer.numItems);
+}
+
+function webGLStart() {
+	var canvas = document.getElementById("mycanvas");
+	initGL(canvas);
+	initShaders();
+	initBuffers();
+
+ 	gl.clearColor(0.0, 0.0, 0.0, 1.0);
+	gl.enable(gl.DEPTH_TEST);
+
+	drawScene();
+}</pre></code>
+			</section>
+
+			<section id="webgl-square" class="slide slide--iframe slide--full" data-class="in-out" data-src="external/webgl-square/index.html" data-color="#247662">
+				<header>webgl</header>
+            </section>
+
+            	<section id="threejs-code" class="slide threejs-code" data-class="basic" data-color="#333333">
+				<header>three.js</header>
+				<code><pre>canvas = document.getElementById('mycanvas');
+renderer = new THREE.WebGLRenderer({canvas: canvas});
+scene = new THREE.Scene();
+camera = new THREE.PerspectiveCamera(45, 500 / 500, 1, 1000);
+light = new THREE.PointLight(0xffffff);
+scene.add(light);
+
+geometry = new THREE.CubeGeometry(1, 1, 1);
+material = new THREE.MeshLambertMaterial();
+cube = new THREE.Mesh(geometry, material);
+cube.position.z = -7;
+scene.add(cube);
+				
+renderer.render(scene, camera);</pre></code>
+			</section>
+			
+			<section id="threejs-code-2" class="slide threejs-code" data-class="basic" data-color="#333333">
+							<header>three.js</header>
+							<code class="highlight"><pre>canvas = document.getElementById('mycanvas');
+renderer = new THREE.WebGLRenderer({canvas: canvas});
+<em>scene = new THREE.Scene();</em>
+camera = new THREE.PerspectiveCamera(45, 500 / 500, 1, 1000);
+light = new THREE.PointLight(0xffffff);
+scene.add(light);
+
+geometry = new THREE.CubeGeometry(1, 1, 1);
+material = new THREE.MeshLambertMaterial();
+cube = new THREE.Mesh(geometry, material);
+cube.position.z = -7;
+scene.add(cube);
+
+renderer.render(scene, camera);</pre></code>
+			</section>
+
+			<section id="threejs-code-3" class="slide threejs-code" data-class="basic" data-color="#333333">
+				<header>three.js</header>
+				<code class="highlight"><pre>canvas = document.getElementById('mycanvas');
+renderer = new THREE.WebGLRenderer({canvas: canvas});
+scene = new THREE.Scene();
+<em>camera = new THREE.PerspectiveCamera(45, 500 / 500, 1, 1000);</em>
+light = new THREE.PointLight(0xffffff);
+scene.add(light);
+
+geometry = new THREE.CubeGeometry(1, 1, 1);
+material = new THREE.MeshLambertMaterial();
+cube = new THREE.Mesh(geometry, material);
+cube.position.z = -7;
+scene.add(cube);
+
+renderer.render(scene, camera);</pre></code>
+			</section>
+
+			<section id="threejs-code-4" class="slide threejs-code" data-class="basic" data-color="#333333">
+				<header>three.js</header>
+				<code class="highlight"><pre>canvas = document.getElementById('mycanvas');
+renderer = new THREE.WebGLRenderer({canvas: canvas});
+scene = new THREE.Scene();
+camera = new THREE.PerspectiveCamera(45, 500 / 500, 1, 1000);
+<em>light = new THREE.PointLight(0xffffff);
+scene.add(light);</em>
+
+geometry = new THREE.CubeGeometry(1, 1, 1);
+material = new THREE.MeshLambertMaterial();
+cube = new THREE.Mesh(geometry, material);
+cube.position.z = -7;
+scene.add(cube);
+
+renderer.render(scene, camera);</pre></code>
+			</section>
+			
+			<section id="threejs-code-5" class="slide threejs-code" data-class="basic" data-color="#333333">
+				<header>three.js</header>
+				<code class="highlight"><pre>canvas = document.getElementById('mycanvas');
+renderer = new THREE.WebGLRenderer({canvas: canvas});
+scene = new THREE.Scene();
+camera = new THREE.PerspectiveCamera(45, 500 / 500, 1, 1000);
+light = new THREE.PointLight(0xffffff);
+scene.add(light);
+
+<em>geometry = new THREE.CubeGeometry(1, 1, 1);
+material = new THREE.MeshLambertMaterial();
+cube = new THREE.Mesh(geometry, material);
+cube.position.z = -7;
+scene.add(cube);</em>
+
+renderer.render(scene, camera);</pre></code>
+			</section>
+            				
+			<section id="webgl-cube" class="slide slide--iframe slide--full" data-class="in-out" data-src="external/webgl-cube/index.html" data-color="#247662">
+				<header>three.js</header>
+			</section>
+            
+            <section id="webgl-demo" class="slide" data-class="basic" data-color="#247662">
+                <a href="http://helloracer.com/webgl/" target="blank"><h2>HELLO RACER</h2></a>
+			</section>
+            
+            <section id="webgl-demo-2" class="slide" data-class="basic" data-color="#247662">
+                <h2>webgl scrolling demo</h2>
+			</section>
+            
+            <section id="webgl-demo-3" class="slide" data-class="basic" data-color="#247662">
+                <h2>webgl flying demo</h2>
+            </section>
+
+            <section id="webgl-demo-4" class="slide" data-class="basic" data-color="#247662">
+                <h2>webgl camera tool</h2>
+			</section>
+
+			<section id="webgl-how-to" class="slide" data-class="basic" data-color="#247662">
+				<blockquote><a href="http://threejs.org/examples/#webgl_terrain_dynamic" target="_blank">examples are</br> your friends</a></blockquote>
+			</section>
+
+			<section id="tools" class="slide" data-class="basic" data-trans="4" data-color="#55acee">
+				<blockquote>computers are tools for automation and productivity</blockquote>
+			</section>
+            
+            <section id="blender" class="slide slide--iframe slide--full" data-class="iframe" data-src="external/blender/index.html" data-color="#70468E">
+				<h2>blender</h2>
+				<h4>three.js plugin</h4>
 			</section>
 
             <section id="word-girl" class="slide" data-class="basic" data-color="#70468E">
 				<h2><a href="http://wordgirldemo.site" target="_blank">word girl</a></h2>
 			</section>
-            
-            <section id="webgl-tool" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
-				<h2>webgl tooling</h2>
-			</section>
-
-            <section id="blender" class="slide" data-class="basic" data-color="#70468E">
-				<h2>Blender<h2>
-			</section>
-            
-            <section id="svg-tool" class="slide" data-class="basic" data-color="#55acee" data-trans="3">
-				<h2>svg tooling</h2>
-			</section>
-
+                       
 			<section id="snap-svg-animator" class="slide" data-class="basic" data-color="#70468E">
 				<h2>Snap.svg Animator<h2>
+            </section>
+
+            <section id="snap-animator-demo" class="slide slide--iframe slide--full" data-class="iframe" data-color="#ffffff" data-src="external/animator/promo.html">
 			</section>
 			
 			<section id="simplification" class="slide" data-class="basic" data-trans="4" data-color="#55acee">
 				<blockquote>tools simplify<br/> the complex</blockquote>
 			</section>
             
-            <section id="automation" class="slide" data-class="basic" data-trans="4" data-color="#55acee">
-				<h2>automation</h2>
-			</section>
-
 			<section id="thanks" class="slide" data-class="basic" data-color="#5e7f70">
 				<h2>thanks</h2>
 				<h4><a href="http://bit.ly/tragedy2015" target="_blank">http://bit.ly/tragedy2015</a></h4>

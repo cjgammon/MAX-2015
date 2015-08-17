@@ -4,7 +4,7 @@ define(function (require) {
 	
 	var App,
 		Backbone = require('backbone'), 
-		//BgView = require('app/views/bg-view'),
+		BgView = require('app/views/bg-view'),
 		MaskView = require('app/views/mask-view'),
 		NotesView = require('pres/views/notes-view'),
 		SlideBasicView = require('app/views/slide-basic-view'),
@@ -18,7 +18,13 @@ define(function (require) {
     App = AppBase.extend({
 		BASE_VIEW: SlideBasicView,
 		
-		SLIDEVIEW_LIST: [],
+        SLIDEVIEW_LIST: [
+			{cl: 'iframe-full', view: IframeFullView},
+			{cl: 'iframe', view: IframeView},
+			{cl: 'video', view: VideoView},
+			{cl: 'in-out', view: InOutView},
+			{cl: 'sequence', view: SequenceView}
+		],
 	
         initialize: function () {
             if (this.passTest() !== true) {
@@ -29,7 +35,7 @@ define(function (require) {
 
             this.notesView = new NotesView();
 
-			//this.bg = new BgView();
+			this.bg = new BgView();
 			this.render();
         },
 
@@ -51,9 +57,9 @@ define(function (require) {
         render: function () {
             AppBase.prototype.render.call(this);
 
-	        //if (this.bg) {
-			    //this.bg.render();
-            //}
+	        if (this.bg) {
+			    this.bg.render();
+            }
         }
     });
 

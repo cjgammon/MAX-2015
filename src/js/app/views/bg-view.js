@@ -5,6 +5,12 @@ define(function (require) {
 		Vars = require('pres/models/vars'),
 		UserEvent = require('pres/events/user-event'),
 		AppEvent = require('pres/events/app-event'),
+		CutBg = require('app/views/bg/trans-cut-bg'),
+		CircleBg = require('app/views/bg/trans-circle-bg'),
+		ArcBg = require('app/views/bg/trans-arc-bg'),
+		RectBg = require('app/views/bg/trans-rect-bg'),
+		StripeBg = require('app/views/bg/trans-stripes-bg'),
+		BG_ARRAY = [CutBg, CircleBg, ArcBg, RectBg, StripeBg],
 		currentSlide,
 		currentBg,
 		BgView;
