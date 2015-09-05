@@ -1,3 +1,5 @@
+.DS_Store
+src/external/.DS_Store
 .sass-cache
 node_modules
 site

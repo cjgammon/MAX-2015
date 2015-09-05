@@ -13,6 +13,7 @@ define(function (require) {
 		VideoView = require('app/views/video-view'),
 		IframeView = require('app/views/iframe-view'),
 		IframeFullView = require('app/views/iframe-full-view'),
+		MyView = require('app/views/my-view'),
         AppBase = require('pres/views/app-base');
 
     App = AppBase.extend({
@@ -23,6 +24,7 @@ define(function (require) {
 			{cl: 'iframe', view: IframeView},
 			{cl: 'video', view: VideoView},
 			{cl: 'in-out', view: InOutView},
+			{id: 'me', view: MyView},
 			{cl: 'sequence', view: SequenceView}
 		],
 	
