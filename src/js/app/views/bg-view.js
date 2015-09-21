@@ -10,7 +10,11 @@ define(function (require) {
 		ArcBg = require('app/views/bg/trans-arc-bg'),
 		RectBg = require('app/views/bg/trans-rect-bg'),
 		StripeBg = require('app/views/bg/trans-stripes-bg'),
-		BG_ARRAY = [CutBg, CircleBg, ArcBg, RectBg, StripeBg],
+		StripeZig = require('app/views/bg/trans-stripes-zig-bg'),
+		ZigBg = require('app/views/bg/trans-zig-bg'),
+		ColorSquaresBg = require('app/views/bg/trans-squares-color-bg'),
+		SquaresBg = require('app/views/bg/trans-squares-bg'),
+		BG_ARRAY = [CutBg, CircleBg, ArcBg, RectBg, StripeBg, StripeZig, ZigBg, SquaresBg, ColorSquaresBg],
 		currentSlide,
 		currentBg,
 		BgView;
