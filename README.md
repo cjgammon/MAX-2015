@@ -1,4 +1,4 @@
-#Making Rich Web Experiences
+#Making Rich Experiences for the Web
 
 Presentation on how the web is changing presented at Adobe MAX 2015
 
