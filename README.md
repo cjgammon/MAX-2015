@@ -1,6 +1,6 @@
-#Evolution of the Web
+#Making Rich Web Experiences
 
-Presentation on how the web is changing presented at SXSW Interactive 2015
+Presentation on how the web is changing presented at Adobe MAX 2015
 
 ##Instructions
 
@@ -14,7 +14,6 @@ To run you must do the following:
 ###links to projects discussed
 
 * [three.js](http://threejs.org/)
-* [mozvr](http://mozvr.com/)
 * [custom camera path tool](https://github.com/cjgammon/three.js-camera-path-tool)
 * [photoshop generator - tutorial](http://tomkrcha.com/?p=3896)
 * [photoshop generator - word girl](https://github.com/adobe-webplatform/Demo-for-PBS-Kids-Word-Girl)
