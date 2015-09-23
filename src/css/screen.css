@@ -953,29 +953,37 @@ code.highlight em {
   letter-spacing: inherit;
 }
 
-/* line 265, ../sass/screen.scss */
+/* line 263, ../sass/screen.scss */
+#word-girl-psd {
+  background-image: url(../assets/images/wordgirl-psd.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* line 270, ../sass/screen.scss */
 #resources {
   font-size: 1rem;
 }
-/* line 268, ../sass/screen.scss */
+/* line 273, ../sass/screen.scss */
 #resources h2 {
   font-size: 3rem;
 }
-/* line 272, ../sass/screen.scss */
+/* line 277, ../sass/screen.scss */
 #resources h3 {
   font-size: 2rem;
 }
-/* line 276, ../sass/screen.scss */
+/* line 281, ../sass/screen.scss */
 #resources a {
   margin: 0.5em;
 }
 
-/* line 281, ../sass/screen.scss */
+/* line 286, ../sass/screen.scss */
 #warning {
   display: none;
 }
 
-/* line 286, ../sass/screen.scss */
+/* line 291, ../sass/screen.scss */
 .no-flexbox #warning {
   position: absolute;
   display: block;
@@ -988,7 +996,7 @@ code.highlight em {
   text-align: center;
   z-index: 10000;
 }
-/* line 298, ../sass/screen.scss */
+/* line 303, ../sass/screen.scss */
 .no-flexbox #warning p {
   display: block;
   margin: 100px auto;
@@ -996,21 +1004,21 @@ code.highlight em {
   line-height: 1.5;
 }
 
-/* line 309, ../sass/screen.scss */
+/* line 314, ../sass/screen.scss */
 .touch body {
   overflow: auto;
 }
-/* line 313, ../sass/screen.scss */
+/* line 318, ../sass/screen.scss */
 .touch #preloader {
   display: none;
 }
-/* line 317, ../sass/screen.scss */
+/* line 322, ../sass/screen.scss */
 .touch #deck {
   position: static;
   overflow-y: scroll;
   overflow-x: hidden;
 }
-/* line 323, ../sass/screen.scss */
+/* line 328, ../sass/screen.scss */
 .touch .slide {
   display: -webkit-flex;
   -webkit-flex-direction: column;
@@ -1030,18 +1038,18 @@ code.highlight em {
   opacity: 1;
   pointer-events: auto;
 }
-/* line 332, ../sass/screen.scss */
+/* line 337, ../sass/screen.scss */
 .touch .slide--iframe {
   display: none;
 }
-/* line 336, ../sass/screen.scss */
+/* line 341, ../sass/screen.scss */
 .touch #webgl-code code {
   width: 70vw;
   height: 50vh;
 }
 
 @media screen and (max-width: 600px) {
-  /* line 344, ../sass/screen.scss */
+  /* line 349, ../sass/screen.scss */
   html {
     font-size: .3em;
   }

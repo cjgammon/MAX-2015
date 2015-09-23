@@ -11,6 +11,7 @@ define(function (require) {
 		SequenceView = require('app/views/sequence-view'),
 		InOutView = require('app/views/inout-view'),
 		VideoView = require('app/views/video-view'),
+		YoutubeView = require('app/views/youtube-view'),
 		IframeView = require('app/views/iframe-view'),
 		IframeFullView = require('app/views/iframe-full-view'),
 		MyView = require('app/views/my-view'),
@@ -24,6 +25,7 @@ define(function (require) {
 			{cl: 'iframe', view: IframeView},
 			{cl: 'video', view: VideoView},
 			{cl: 'in-out', view: InOutView},
+			{cl: 'youtube', view: YoutubeView},
 			{id: 'me', view: MyView},
 			{cl: 'sequence', view: SequenceView}
 		],
