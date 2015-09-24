@@ -34,8 +34,8 @@ define(function (require) {
             }
 
             //populate squares
-            for (i = 0; i < instance.width / instance.squareSize; i += 1) {
-                for (j = 0; j < instance.height / instance.squareSize; j += 1) {
+            for (i = 0; i < (instance.width / instance.squareSize) + 1; i += 1) {
+                for (j = 0; j < (instance.height / instance.squareSize) + 1; j += 1) {
                     
                     instance.squares.push({x: _x, y: _y, s: 0});
                     instance.tl.add(new TweenMax.to(instance.squares[k], 0.4, {s: 1, ease: Quad.easeOut}), k * 0.01);

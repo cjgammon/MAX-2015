@@ -429,6 +429,12 @@
             <section id="svg-demo-code" class="slide slide--iframe" data-class="iframe" data-color="#333333" data-src="external/svg-demo-code/scene.html">
             </section>
 
+            <section id="svg-js" class="slide" data-class="basic" data-color="#eb8b00" data-trans="1">
+                <h2>SVG <svg width="150" height="150" style="transform: translate(0, 50px)">
+    <path class="heart" fill="#fbcbf2" d="M79.9,35.9C62.4-5,12.7,4.5,12.4,52c-0.2,26.1,23.7,35.8,39.5,46.3c15.4,10.1,26.3,23.9,28.1,29.8c1.5-5.8,13.7-20,27.9-30.1c15.6-11.1,39.7-20.2,39.5-46.3C147.1,4.1,96.6-3.4,79.9,35.9z"/>
+</svg> JS</h2>
+            </section>
+
 			<section id="libraries" class="slide" data-class="basic" data-color="#55acee" data-trans="4">
 				<blockquote>libraries make it easier</blockquote>
 			</section>
@@ -455,7 +461,7 @@ var circ = s.circle(50, 50, 50);</pre></code>
 			</section>
   
             <section id="drawing-api" class="slide" data-class="basic" data-color="#36AD8E" data-trans="6">
-                <blockquote>the web needs a 2d drawing api</blockquote>
+                <blockquote>the web needs a<br/> 2d drawing api</blockquote>
 			</section>
 
 	        <section id="canvas-2d" class="slide slide--iframe slide--full" data-class="iframe" data-src="external/canvas/index.html" data-color="#36AD8E">
@@ -469,8 +475,6 @@ var circ = s.circle(50, 50, 50);</pre></code>
 var ctx = canvas.getContext("2d");
 ctx.fillStyle = "red";
 ctx.fillRect(0, 0, 50, 50);
-
-ctx.clearRect(0, 0, 50, 50);
 </pre></code>
 			</section>
 
@@ -484,19 +488,9 @@ ctx.clearRect(0, 0, 50, 50);
 			</section>
             
             <section id="canvas-code-2" class="slide" data-class="basic" data-color="#333333">
-                <code><pre>var stage = new createjs.Stage("canvas");
-
-var rect = new createjs.Shape();
-rect.graphics.beginFill("red");
-rect.graphics.drawRect(0, 0, 50, 50);
-stage.addChild(rect);
-
-stage.update();
-</pre></code>
-            </section>
-         
-            <section id="canvas-code-3" class="slide" data-class="basic" data-color="#333333">
                 <code><pre>var renderer = new PIXI.CanvasRenderer(100, 100);
+document.body.appendChild(renderer.view);
+
 var stage = new PIXI.Container();
 
 var rect = new PIXI.Graphics();
@@ -528,7 +522,7 @@ renderer.render(stage);
             </section>
 
             <section id="graphics-api" class="slide" data-class="basic" data-color="#36AD8E" data-trans="6">
-                <blockquote>the web needs a low level graphics api</blockquote>
+                <blockquote>the web needs a<br/> low level graphics api</blockquote>
 			</section>
 
             <section id="graphics-opengl" class="slide slide--iframe slide--full" data-class="in-out" data-src="external/webgl/index.html" data-color="#36AD8E">
@@ -849,17 +843,23 @@ renderer.render(scene, camera);</pre></code>
 			</section>
             
             <section id="animation" class="slide" data-class="basic" data-trans="8" data-color="#70468E">
-                <blockquote>why are we building visual content in a non-visual way</blockquote>
+                <blockquote>we shouldn't build visual content in a non-visual way</blockquote>
 			</section>
 
 			<section id="simplification" class="slide" data-class="basic" data-trans="4" data-color="#55acee">
                 <blockquote>tools &amp; libraries<br/> simplify the complex</blockquote>
 			</section>
             
+            <section id="survey" class="slide" data-class="basic" data-trans="8" data-color="#55acee">
+                <h3>like this talk?</h3>
+                <h2>take the survey!</h2>
+                <h4>if you didn't, please explain why.</h4>
+            </section>
+
 			<section id="thanks" class="slide" data-class="basic" data-color="#5e7f70" data-trans="7">
 				<h2>thanks</h2>
-				<!-- <h4><a href="http://bit.ly/tragedy2015" target="_blank">http://bit.ly/tragedy2015</a></h4> -->
-				<h4><a href="http://www.twitter.com/cjgammon" target="_blank">@cjgammon</a></h4>
+				<h4><a href="http://bit.ly/richweb2015" target="_blank">http://bit.ly/richweb2015</a></h4>
+                <h4><a href="http://www.twitter.com/cjgammon" target="_blank">@cjgammon</a></h4>
 			</section>
 		</div>
 
