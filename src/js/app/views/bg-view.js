@@ -68,6 +68,7 @@ define(function (require) {
 					currentBg.destroy();
 				}
 
+				clearTimeout(this.to); //cancel delayed hide
 				this.$el.hide();
 				this.$webglEl.show();
 
@@ -94,11 +95,12 @@ define(function (require) {
 
 			this.$el.show();
 
-			//allow transition
+			//delay hide to allow transition
+
 			if (isTerrain) {
-				setTimeout(function () {
+				this.to = setTimeout(function () {
 					this.$webglEl.hide();
-				}, 1000);
+				}.bind(this), 2000);
 			} else {
 				this.$webglEl.hide();
 			}
