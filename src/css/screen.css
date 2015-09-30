@@ -105,7 +105,7 @@ aside {
 }
 
 /* line 36, ../sass/pres/_pres.scss */
-#bg {
+.bg {
   position: fixed;
   pointer-events: none;
 }

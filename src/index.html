@@ -22,16 +22,17 @@
 	<!--[if IE]>
         <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
     <![endif]-->
-		
+
         <script src="js/vendor/modernizr-2.6.2.js"></script>
     </head>
     <body>
-	
+
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
-        
-        <canvas id="bg"></canvas>
+
+        <canvas id="bg-3d" class="bg"></canvas>
+        <canvas id="bg" class="bg"></canvas>
 
 		<div id="deck">
 			<section id="cover" class="slide slide--iframe slide--full" data-class="iframe" data-color="#333333" data-src="external/cover/index.html">
@@ -43,7 +44,7 @@
 			</section>
 
 			<section id="me" class="slide" data-class="basic" data-trans="1" data-color="#5e7f70">
-				
+
 				<svg version="1.1" id="me-ill" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 width="300" height="300" viewBox="0 0 300 300" xml:space="preserve">
 					<defs>
@@ -52,10 +53,10 @@
 					<clipPath id="SVGID_2_">
 						<use xlink:href="#SVGID_1_"  overflow="visible"/>
 					</clipPath>
-						
+
 					<circle id="me-circle-1" fill="#61AF93" cx="150" cy="150" r="118.2"/>
 					<circle id="me-circle-2" fill="#FFFFFF" cx="150" cy="150" r="103.3"/>
-				
+
 					<g clip-path="url(#SVGID_2_)">
 						<g id="me-character">
 							<path fill="#545554" d="M192,729.8c0,0,2.4,37.5,3.8,44.3s9.5,17.7,25.2,15.3c15.7-2.4,14.2-14.2,14.3-20.8
@@ -362,9 +363,9 @@
                             </g>
                             <polygon fill="#994B4B" points="143.3,214.2 122.8,234.6 112.9,212.6 128.1,199.9"/>
 						</g>
-					</g>	
+					</g>
 				</svg>
-				
+
 				<h2>Hi</h2>
 				<h4>I'm CJ Gammon</h4>
 			</section>
@@ -374,11 +375,11 @@
 
             <section id="red-universe" class="slide slide--iframe" data-class="iframe" data-color="#ffffff" data-src="http://reduniverse.com/">
 			</section>
-            
+
             <section id="tomorrow" class="slide" data-class="basic" data-color="#5e7f70" data-trans="1">
 				<blockquote>how will we create for the web of the future?</blockquote>
 			</section>
-           
+
             <section id="everyone" class="slide slide--iframe slide--full" data-class="in-out" data-src="external/everyone_dots/index.html" data-color="#ffc571" data-trans="2">
 			</section>
 
@@ -386,7 +387,7 @@
 				<code><pre>&lt;h1&gt;Header&lt;/h1&gt;
 &lt;p&gt;This is a paragraph.&lt;/p&gt;</pre></code>
 			</section>
-            
+
             <section id="simplify" class="slide" data-class="basic" data-color="#55acee" data-trans="4">
 				<blockquote>SIMPLIFY THE CREATION OF MORE COMPLEX CONTENT</blockquote>
 			</section>
@@ -397,11 +398,11 @@
             <section id="graphics" class="slide" data-class="basic" data-color="#5e7f70" data-trans="8">
 				<h2>GRAPHICS</h2>
 			</section>
-            
+
             <section id="caniuse" class="slide" data-class="basic" data-color="#5e7f70" data-trans="7">
 				<h2>caniuse.com</h2>
 			</section>
-            
+
             <section id="high-level" class="slide" data-class="basic" data-color="#5e7f70">
 				<h4>high level extras</h4>
 				<h2>CSS &amp; SVG</h2>
@@ -412,7 +413,7 @@
 				<h4>scalable vector graphics</h4>
 				<h2>SVG</h2>
 			</section>
-            
+
             <section id="svg-example" class="slide slide--iframe slide--full" data-class="iframe" data-color="#eb8b00" data-src="external/e-vector/index.html">
 			</section>
 
@@ -421,11 +422,11 @@
     &lt;circle cx="50" cy="50" r="50"/&gt;
 &lt;/svg&gt;</pre></code>
 			</section>
-           
+
             <section id="svg-demo" class="slide" data-class="basic" data-color="#ffffff">
                 <img src="assets/images/scene.svg" width="100%" height="100%"/>
             </section>
-            
+
             <section id="svg-demo-code" class="slide slide--iframe" data-class="iframe" data-color="#333333" data-src="external/svg-demo-code/scene.html">
             </section>
 
@@ -449,7 +450,7 @@
                 <code><pre>var s = new Snap(100, 100);
 var circ = s.circle(50, 50, 50);</pre></code>
 			</section>
-            
+
             <section id="svg-demo-2" class="slide slide--iframe" data-class="iframe" data-color="#ffffff" data-src="external/snap-game/index.html">
 			</section>
 
@@ -459,7 +460,7 @@ var circ = s.circle(50, 50, 50);</pre></code>
             <section id="svg-demo-4" class="slide" data-class="basic" data-color="#eb8b00">
                 <a href="http://cjgammon.github.io/svg-art-generator/" target="blank"><h2>generative application</h2></a>
 			</section>
-  
+
             <section id="drawing-api" class="slide" data-class="basic" data-color="#36AD8E" data-trans="6">
                 <blockquote>the web needs a<br/> 2d drawing api</blockquote>
 			</section>
@@ -468,7 +469,7 @@ var circ = s.circle(50, 50, 50);</pre></code>
 				<h4>Core Graphics</h4>
 				<h2>2d Canvas</h2>
 			</section>
-            
+
             <section id="canvas-code" class="slide" data-class="basic" data-color="#333333">
                 <code><pre>var canvas = document.createElement("canvas");
 
@@ -486,7 +487,7 @@ ctx.fillRect(0, 0, 50, 50);
 				<h3>easel.js</h3>
 				<h3>pixi.js</h3>
 			</section>
-            
+
             <section id="canvas-code-2" class="slide" data-class="basic" data-color="#333333">
                 <code><pre>var renderer = new PIXI.CanvasRenderer(100, 100);
 document.body.appendChild(renderer.view);
@@ -502,19 +503,19 @@ stage.addChild(rect);
 renderer.render(stage);
                 </pre></code>
             </section>
-            
+
             <section id="canvas-sprites" class="slide slide--iframe slide--full" data-class="iframe" data-color="#000000" data-src="external/g-demo-spritesheet/index.html">
 			</section>
-            
+
             <section id="canvas-camera" class="slide slide--iframe slide--full" data-class="iframe" data-color="#000000" data-src="external/g-demo-camera/index.html">
 			</section>
-            
+
             <section id="canvas-parallax" class="slide slide--iframe slide--full" data-class="iframe" data-color="#000000" data-src="external/g-demo-parallax/index.html">
 			</section>
 
             <section id="canvas-blend" class="slide slide--iframe slide--full" data-class="iframe" data-color="#000000" data-src="external/canvas-blend/index.html">
 			</section>
-            
+
             <section id="wtf" class="slide slide--full" data-class="video" data-color="#ffffff" data-video="assets/videos/WTF.mp4">
 			</section>
 
@@ -598,7 +599,7 @@ function initShaders() {
 
 	gl.useProgram(shaderProgram);
 
-	shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram, 
+	shaderProgram.vertexPositionAttribute = gl.getAttribLocation(shaderProgram,
 		"aVertexPosition");
 	gl.enableVertexAttribArray(shaderProgram.vertexPositionAttribute);
 
@@ -640,7 +641,7 @@ function drawScene() {
 
 	mat4.translate(mvMatrix, [0.0, 0.0, -7.0]);
 	gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer);
-	gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, 
+	gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute,
 		squareVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0);
 	setMatrixUniforms();
 	gl.drawArrays(gl.TRIANGLE_STRIP, 0, squareVertexPositionBuffer.numItems);
@@ -681,10 +682,10 @@ material = new THREE.MeshLambertMaterial();
 cube = new THREE.Mesh(geometry, material);
 cube.position.z = -7;
 scene.add(cube);
-				
+
 renderer.render(scene, camera);</pre></code>
 			</section>
-			
+
 			<section id="threejs-code-2" class="slide threejs-code" data-class="basic" data-color="#333333">
 							<header>three.js</header>
 							<code class="highlight"><pre>canvas = document.getElementById('mycanvas');
@@ -738,7 +739,7 @@ scene.add(cube);
 
 renderer.render(scene, camera);</pre></code>
 			</section>
-			
+
 			<section id="threejs-code-5" class="slide threejs-code" data-class="basic" data-color="#333333">
 				<header>three.js</header>
 				<code class="highlight"><pre>canvas = document.getElementById('mycanvas');
@@ -756,44 +757,48 @@ scene.add(cube);</em>
 
 renderer.render(scene, camera);</pre></code>
 			</section>
-            				
+
 			<section id="webgl-cube" class="slide slide--iframe slide--full" data-class="in-out" data-src="external/webgl-cube/index.html" data-color="#247662">
 				<header>three.js</header>
 			</section>
-            
+
             <section id="webgl-demo" class="slide slide--iframe" data-class="iframe" data-color="#ffffff" data-src="external/racer/index.html">
                 <!-- <a href="http://helloracer.com/webgl/" target="blank"><h2>HELLO RACER</h2></a> -->
 			</section>
- 
+
 			<section id="webgl-how-to" class="slide" data-class="basic" data-color="#247662" data-trans="2">
 				<blockquote><a href="external/threejs-examples/index.html#webgl_terrain_dynamic" target="_blank">examples are</br> your friends</a></blockquote>
 			</section>
-            
-            <section id="integration" class="slide" data-class="basic" data-color="#333" data-trans="6">
-                <blockquote>how do these fit<br/> into the web?</blockquote>
+
+      <section id="integration" class="slide" data-class="basic" data-color="#333" data-trans="6">
+          <blockquote>how do these fit<br/> into the web?</blockquote>
 			</section>
 
-            <section id="parallax-scroll" class="slide slide--iframe slide--full" data-class="iframe" data-color="#ffffff" data-src="external/e-parallax/index.html">
-			</section>
-            
-            <section id="parallax-scroll-3d" class="slide slide--iframe" data-class="iframe" data-color="#ffffff" data-src="external/parallax-webgl/index.html">
+      <section id="parallax-scroll" class="slide slide--iframe slide--full" data-class="iframe" data-color="#ffffff" data-src="external/e-parallax/index.html">
 			</section>
 
-            <section id="parallax-fly-3d" class="slide slide--iframe" data-class="iframe" data-src="external/MAX-2014-master/src/index.html" data-color="#ffffff">
-            </section>
+      <section id="parallax-scroll-3d" class="slide slide--iframe" data-class="iframe" data-color="#ffffff" data-src="external/parallax-webgl/index.html">
+			</section>
+      <!--
+      <section id="parallax-fly-3d" class="slide slide--iframe" data-class="iframe" data-src="external/MAX-2014-master/src/index.html" data-color="#ffffff">
+      </section>
+      -->
+      <section id="parallax-fly-3d" class="slide slide--iframe" data-pos="0.01" data-color="#ffffff">
+        hi
+      </section>
 
-            <section id="camera-tool" class="slide" data-class="basic" data-color="#247662" data-trans="1">
-                <a href="http://cjgammon.github.io/three.js-camera-path-tool/" target="blank"><h3>three.js camera<br/> mapping tool</h3></a>
+      <section id="camera-tool" class="slide" data-class="basic" data-pos="0.1" data-color="#247662">
+          <a href="http://cjgammon.github.io/three.js-camera-path-tool/" target="blank"><h3>three.js camera<br/> mapping tool</h3></a>
 			</section>
 
-            <section id="libraries-4" class="slide" data-class="basic" data-trans="4" data-color="#55acee">
-                <blockquote>libraries make it easier</blockquote>
+      <section id="libraries-4" class="slide" data-class="basic" data-trans="4" data-color="#55acee">
+          <blockquote>libraries make it easier</blockquote>
 			</section>
-            
-            <section id="libraries-code" class="slide" data-class="basic" data-trans="5" data-color="#70468E">
-                <blockquote>libraries make it easier<br/> ...to code</blockquote>
+
+      <section id="libraries-code" class="slide" data-class="basic" data-trans="5" data-color="#70468E">
+          <blockquote>libraries make it easier<br/> ...to code</blockquote>
 			</section>
-            
+
             <!-- <section id="designers" class="slide" data-class="basic" data-trans="5" data-color="#55acee"> -->
             <!--     <blockquote>any visual designers<br/> feeling lost?</blockquote> -->
 			<!--</section>-->
@@ -802,10 +807,10 @@ renderer.render(scene, camera);</pre></code>
 				<!-- <blockquote>computers are tools for automation and productivity</blockquote> -->
 			<!--</section>-->
 
-            <section id="workflows" class="slide" data-class="basic" data-trans="4" data-color="#55acee">
-                <blockquote>let's optimize<br/> designer workflows</blockquote>
+      <section id="workflows" class="slide" data-class="basic" data-trans="4" data-color="#55acee">
+          <blockquote>let's optimize<br/> designer workflows</blockquote>
 			</section>
-          
+
             <section id="blender" class="slide slide--iframe slide--full" data-class="iframe" data-src="external/blender/index.html" data-color="#70468E">
 				<h2>blender</h2>
 				<h4>three.js plugin</h4>
@@ -815,7 +820,7 @@ renderer.render(scene, camera);</pre></code>
                 <h2>photoshop</h2>
 				<h4>generator</h4>
             </section>
-            
+
             <section id="word-girl-psd" class="slide" data-class="basic" data-color="#70468E">
             </section>
 
@@ -825,10 +830,10 @@ renderer.render(scene, camera);</pre></code>
 
             <section id="homestar" class="slide slide--iframe slide--full" data-class="sequence" data-src="external/homestar/index.html" data-color="#70468E">
             </section>
-            
+
             <section id="daniel-tiger" class="slide slide--iframe slide--full" data-class="youtube" data-start="8" data-video="dxC3jPPNyjA" data-trans="1" data-color="black">
             </section>
-            
+
             <section id="flash-custom-platform" class="slide" data-class="basic" data-color="#70468E">
                 <h2>flash</h2>
                 <h4>custom platforms</h4>
@@ -841,7 +846,7 @@ renderer.render(scene, camera);</pre></code>
 
             <section id="snap-animator-demo" class="slide slide--iframe slide--full" data-class="iframe" data-color="#ffffff" data-src="external/animator/promo.html">
 			</section>
-            
+
             <section id="animation" class="slide" data-class="basic" data-trans="8" data-color="#70468E">
                 <blockquote>we shouldn't build visual content in a non-visual way</blockquote>
 			</section>
@@ -849,14 +854,14 @@ renderer.render(scene, camera);</pre></code>
 			<section id="simplification" class="slide" data-class="basic" data-trans="4" data-color="#55acee">
                 <blockquote>tools &amp; libraries<br/> simplify the complex</blockquote>
 			</section>
-            
+
             <section id="survey" class="slide" data-class="basic" data-trans="8" data-color="#55acee">
                 <h3>like this talk?</h3>
                 <h2>take the survey!</h2>
                 <h4>if you didn't, please explain why.</h4>
             </section>
 
-			<section id="thanks" class="slide" data-class="basic" data-color="#5e7f70" data-trans="7">
+			<section id="thanks" class="slide" data-class="basic" data-color="#333333" data-trans="7">
 				<h2>thanks</h2>
 				<h4><a href="http://bit.ly/richweb2015" target="_blank">http://bit.ly/richweb2015</a></h4>
                 <h4><a href="http://www.twitter.com/cjgammon" target="_blank">@cjgammon</a></h4>
@@ -887,7 +892,7 @@ renderer.render(scene, camera);</pre></code>
 		<script>
 		var tag,
 			firstScriptTag;
-			
+
 		tag = document.createElement('script');
 		tag.src = "https://www.youtube.com/iframe_api";
 		firstScriptTag = document.getElementsByTagName('script')[0];
@@ -895,6 +900,6 @@ renderer.render(scene, camera);</pre></code>
 		</script>
 
         <script data-main="js/main" src="./js/vendor/requirejs/require.js"></script>
-		
+
     </body>
 </html>
