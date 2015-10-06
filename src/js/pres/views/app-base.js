@@ -86,7 +86,7 @@ define(function (require) {
 							CameraPath.delta = parseFloat(pos);
 							AppEvent.trigger('resolve');
 						} else {
-							new TweenMax.to(CameraPath, 4, {
+							new TweenMax.to(CameraPath, 3, {
 								delta: parseFloat(pos),
 								ease: Quad.easeInOut,
 								onUpdate: function () {
